@@ -6,6 +6,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using ChaiShai;
+using System.Data.Entity;
+using ChaiShai.Model;
 
 namespace ChaiShai
 {
@@ -16,6 +18,9 @@ namespace ChaiShai
             // Code that runs on application startup
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
+
+            // Initialize the product database.
+            Database.SetInitializer(new ProductDatabaseInitializer());
         }
 
         void Application_End(object sender, EventArgs e)

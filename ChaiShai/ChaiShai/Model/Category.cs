@@ -17,6 +17,6 @@ namespace ChaiShai.Model
         [Required, StringLength(100000), Display(Name = "Category Description")]
         public string CategoryDescription { get; set; }
 
-        public virtual ICollection<Products> Products { get; set;}
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
