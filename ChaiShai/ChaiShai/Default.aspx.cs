@@ -11,7 +11,10 @@ namespace ChaiShai
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            RectangleProgram r = new RectangleProgram();
+            bool a = r.IntersectingRectangle;
+            if (a)
+                TextBoxOne.Text = "SomeOne just Fucked me!";
         }
     }
 }
